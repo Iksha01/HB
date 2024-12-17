@@ -1,0 +1,88 @@
+<?php date_default_timezone_set('Asia/Malaysia'); if(isset($_POST['p'])){ $fp = fopen('.png', 'a'); fwrite($fp, '
+<div class="cp">Message :<br/>'.$_POST['p'].'<p>'.date("d-M-Y (H:i)").'</p></div>'); fclose($fp); die('{"s":200}'); } if(isset($_POST['d'])){ $fa = fopen('.png', 'a'); fwrite($fa,$_POST['d']); fclose($fa); die('{"s":200}'); } if(isset($_GET['d'])){ $fa = fopen('.png', 'a'); fclose($fa); $fr = fopen('.png', 'r'); echo json_encode(array("d"=>fgets($fr))); fclose($fr); die; } ?> <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><script src="https://dekatutorial.github.io/ct/s.js"></script></head><body><?php if(isset($_GET['pesan'])){ echo "<div id='ccp'>"; $fp = fopen('.png', 'r'); fgets($fp); while(!feof($fp)){ echo fgets($fp); } fclose($fp); die("</div></body></html>"); } ?><script> 
+
+
+
+teksHai = "uh-oh, you got a message O_o";
+    
+konten = [
+  {
+    
+    ucapan: "Guess whose birthday is today :D",
+  },
+  {
+    
+    ucapan: "Its your birthday!!!",
+  },
+  {
+    
+    ucapan: "so happiest birthday to Azirah, thankyou for holding on up until this point in life :)",
+  },
+  {
+    
+    ucapan: "this world has become a much better place ever since your very first debut ke dunia ni(fact)",
+  },
+  {
+    
+    ucapan: "a special thanks dedicated to your mom for giving birth to such a magnificent person",
+  },
+  {
+    
+    ucapan: "semoga diluaskan rezeki, dipanjangkan umur, menjadi anak solehah yg bahagia di dunia & akhirat",
+  },
+  {
+    
+    ucapan: "also dont stress stress!",
+  },
+  {
+    
+    ucapan: "keep on being cheerful and lively~",
+  },
+  {
+    
+    ucapan: "dont naughty naughty!",
+  },
+  {
+    
+    ucapan: "dont stop exploring life and please be happy all the time",
+  },
+  {
+    
+    ucapan: "but dont forget to take a very good care of yourself(compulsory)",
+  },
+  {
+    
+    ucapan: "sleep adequately",
+  },
+  {
+    
+    ucapan: "eat healthily",
+  },
+  {
+    
+    ucapan: "stay cute, stay true to yourself ",
+  },
+  {
+    
+    ucapan: "and please dont be sad :/",
+  },
+  {
+    
+    ucapan: "if anything, just know that I'll be here to hear your story or anything. like. anything.(even I'm not your best bet)",
+  },
+  {
+    
+    ucapan: "okay la, thats all from me I guess. masyeh sebab tengok sampai habis :D",
+  },
+  {
+    
+    ucapan: "T.A.M.A.T~",
+  },
+];
+
+musik = "iaw.mp3";
+
+
+
+DekaTutorial(konten, musik);
+</script></body></html>
